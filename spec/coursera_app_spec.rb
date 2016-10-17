@@ -1,15 +1,15 @@
-Capybara.default_driver = :selenium
-# Capybara.default_driver = :poltergeist
+# Capybara.default_driver = :selenium
+Capybara.default_driver = :poltergeist
 
-Capybara.app_host = "http://search-coursera-jhu.herokuapp.com/"
+Capybara.app_host = "http://search-coursera-example02.herokuapp.com/"
 
 describe "Coursera App" do
 
   describe "visit root" do
   	before { visit '/' }
     
-    it "displays 'Johns Hopkins' (default)" do
-      expect(page).to have_content 'Johns Hopkins'
+    it "displays 'Computer' (default)" do
+      expect(page).to have_content 'Computer'
     end
 
     it "displays table element that has a row with 3 columns" do
